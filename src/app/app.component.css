@@ -1,0 +1,26 @@
+/* HEADER */
+.nav{
+    background: #1f4aa1;
+    height: 70px;
+}
+
+.nav-item{
+    display: flex;
+    align-items: center;
+}
+
+.nav-item a{
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+.nav-item a:hover{
+    color: #cccccc;
+}
+
+/* FOOTER */
+footer{
+    background: #1f4aa1;
+    color: #ffffff;
+    height: 70px;
+}
