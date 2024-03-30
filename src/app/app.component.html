@@ -2,22 +2,22 @@
 <header>
   <ul class="nav">
     <li class="nav-item">
-      <a class="nav-link">Inicio</a>
+      <a class="nav-link" routerLink="/inicio" routerLinkActive="router-link-active" >Inicio</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link">Nota Total</a>
+        <a class="nav-link" routerLink="/nota-total" routerLinkActive="router-link-active">Nota Total</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link">Nota Individual</a>
+        <a class="nav-link" routerLink="/nota-individual" routerLinkActive="router-link-active">Nota Individual</a>
     </li>
   </ul>
 </header>
 
-<app-inicio/>
+<router-outlet />
 
 <!-- FOOTER -->
 <footer class="d-flex justify-content-center align-items-center">
   <span ><b>2024. Enmanuel Obando. Todos los derechos reservados</b></span>
 </footer>
 
-<router-outlet />
+

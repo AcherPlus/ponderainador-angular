@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { InicioComponent } from "./inicio/inicio.component";
 
 @Component({
@@ -7,7 +7,7 @@ import { InicioComponent } from "./inicio/inicio.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, InicioComponent]
+    imports: [RouterOutlet, InicioComponent, RouterLink, RouterLinkActive]
 })
 export class AppComponent {
   title = 'ponderainador-angular';
