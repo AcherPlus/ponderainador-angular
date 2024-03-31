@@ -41,6 +41,7 @@
     border: none;
     background-color: #417EE8;
     color: #ffffff;
+    margin-top: 60px;
 }
 
 .seccion .boton-resultado-total:hover,.seccion .boton-resultado-individual:hover{

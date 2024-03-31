@@ -32,7 +32,6 @@ export class NotaTotalComponent implements OnInit{
   }
 
   botonResultadoTotal(){
-    
     //Para las notas
     const nota1 = parseFloat(this.nota1?.nativeElement.value);
     const nota2 = parseFloat(this.nota2?.nativeElement.value);
@@ -51,7 +50,6 @@ export class NotaTotalComponent implements OnInit{
     }
 
     if(!isNaN(resultado)){
-  
       if(resultado > 15){
         this.rendered2.appendChild(mensajeModal, this.rendered2.createText('Felicidades'));
         this.rendered2.setStyle(mensajeModal, 'color', 'green');
@@ -64,8 +62,8 @@ export class NotaTotalComponent implements OnInit{
         this.rendered2.appendChild(mensajeModal, this.rendered2.createText('Reprobaste'));
         this.rendered2.setStyle(mensajeModal, 'color', 'red');
       }else{
-          mensajeModal.textContent = `CUIDADO`;
-          mensajeModal.style.color = "red";
+        this.rendered2.appendChild(mensajeModal, this.rendered2.createText('CUIDADO'));
+        this.rendered2.setStyle(mensajeModal, 'color', 'red');  
       }
 
     resultadoParrafo.innerHTML = `Haz obtenido un puntaje de <b>${resultado}</b>`;
@@ -74,7 +72,6 @@ export class NotaTotalComponent implements OnInit{
       //Texto h1
       this.rendered2.appendChild(mensajeModal, this.rendered2.createText('¡AVISO!'));
       this.rendered2.setStyle(mensajeModal, 'color', 'red');
-
       //Texto p
       this.rendered2.appendChild(resultadoParrafo, this.rendered2.createText('Resultado no válido, ingrese valores entre 0 y 20.'));
       this.rendered2.setStyle(resultadoParrafo, 'color', 'red');

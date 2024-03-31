@@ -6,16 +6,16 @@
         </div>
         <div class="row">
             <div class="col-md-4 text-center">
-                <h2 class="titulo-eva1">Evaluación Continua</h2>
+                <h2 #tituloEva1></h2>
                 <input #nota1 type="text" placeholder="Ingresa tu nota" autocomplete="off" required>
             </div>
             <div class="col-md-4 text-center">
-                <h2 class="titulo-eva2">Examen Final</h2>
+                <h2 #tituloEva2></h2>
                 <input #nota2 type="text" placeholder="Ingresa tu nota" autocomplete="off" required>
             </div>
             <div class="col-md-4 text-center">
                 <h2>ESCOGER NOTA</h2>
-                <select name="notas" class="select-notas">
+                <select name="notas" class="select-notas" #notaEscogida (change)="selectNota()">
                     <option value="EP" class="opcion">Examen Parcial</option>
                     <option value="EC" class="opcion">Evaluación Continua</option>
                     <option value="EF" class="opcion">Examen Final</option>
@@ -25,7 +25,7 @@
         <div class="row">
             <div class="col-md-8 text-center">
                 <!-- BOTÓN RESULTADO -->
-                <button type="button" class="boton-resultado-individual btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">CALCULAR RESTANTE</button>
+                <button type="button" (click)="botonResultadoIndividual()" class="boton-resultado-individual btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" >CALCULAR RESTANTE</button>
 
                 <!-- AVISO -->
                 <p class="aviso-negativo"><b>AVISO: </b>Si la nota mínima sale negativa significa que, aunque no des dicho examen <br> o no consigas una alta evaluación, apruebas de todos modos.</p>
@@ -35,11 +35,11 @@
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5 text-black" id="exampleModalLabel">RESULTADO</h1>
+                                <h1 class="modal-title fs-5 text-black" #mensajeModal>NOTA INDIVIDUAL</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <p class="resultadoParrafo text-black"></p>
+                                <p class="text-black" #resultadoParrafo></p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
