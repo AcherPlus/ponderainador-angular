@@ -21,6 +21,7 @@
 .seccion h2{
     color: #ffffff;
     font-size: 40px;
+    margin-top: 40px;
 }
 
 .seccion input{
@@ -41,6 +42,7 @@
     border: none;
     background-color: #417EE8;
     color: #ffffff;
+    margin-top: 40px;
 }
 
 .seccion .boton-resultado-total:hover,.seccion .boton-resultado-individual:hover{
@@ -65,6 +67,10 @@
     color: #ffffff;
 }
 
+.modal-content p{
+    font-size: 20px;
+}
+
 /* ANIMACIONES */
 
 @keyframes aparecer-derecha {
@@ -86,5 +92,113 @@
     100%{
         transform: translateX(0px);
         opacity: 1;
+    }
+}
+
+/*RESPONSIVE*/
+@media (max-width: 1400px){
+    .seccion h1{
+        font-size: 80px;
+    }
+    .seccion h2{
+        font-size: 30px;
+    }
+    .seccion p{
+        font-size: 18px;
+    }
+    .seccion input{
+        width: 70%;
+        height: 60px;
+        font-size: 20px;
+    }
+    .seccion .boton-resultado-total, .seccion .boton-resultado-individual{
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .modal-content p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .seccion h2{
+        font-size: 25px;
+    }
+    .seccion p{
+        font-size: 15px;
+    }
+
+    .modal-content p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .seccion h1{
+        font-size: 60px;
+    }
+    .seccion h2{
+        font-size: 20px;
+    }
+    .seccion p{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .seccion .boton-resultado-total, .seccion .boton-resultado-individual{
+        margin-top: 30px;
+    }
+
+    .modal-content p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .seccion h1{
+        font-size: 50px;
+    }
+    .seccion h2{
+        margin-top: 10px;
+    }
+    .seccion p{
+        font-size: 14px;
+    }
+
+    .modal-content p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .seccion h1{
+        font-size: 40px;
+    }
+    .seccion h2{
+        font-size: 20px;
+    }
+    .seccion p{
+        font-size: 14px;
+    }
+    .seccion .boton-resultado-total, .seccion .boton-resultado-individual{
+        margin-top: 35px;
+    }
+
+    .modal-content{
+        margin: auto;
+        width: 80%;
+    }
+
+    .modal-content p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .seccion h1{
+        font-size: 30px;
     }
 }

@@ -5,21 +5,21 @@
             <h1 class="text-center">NOTA TOTAL</h1>
         </div>
         <div class="row">
-            <div class="col-md-4 text-center">
+            <div class="col-sm-4 mt-1 text-center">
                 <h2>Examen Parcial<br>(30%)</h2>
                 <input #nota1 type="text" placeholder="Ingresa tu nota" autocomplete="off" required>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-sm-4 mt-1 text-center">
                 <h2>Evaluación Continua<br>(40%)</h2>
                 <input #nota2 type="text" placeholder="Ingresa tu nota" autocomplete="off" required>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-sm-4 mt-1 text-center">
                 <h2>Examen Final<br>(30%)</h2>
                 <input #nota3 type="text" placeholder="Ingresa tu nota" autocomplete="off" required>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-sm-12 text-center">
                 
                 <!-- BOTÓN RESULTADO -->
                 <button type="button" (click)="botonResultadoTotal()" class="boton-resultado-total btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">CALCULAR PROMEDIO</button>

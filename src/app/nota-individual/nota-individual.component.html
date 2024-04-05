@@ -5,15 +5,15 @@
             <h1 class="text-center">NOTA INDIVIDUAL</h1>
         </div>
         <div class="row">
-            <div class="col-md-4 text-center">
+            <div class="col-sm-4 mt-1 text-center">
                 <h2 #tituloEva1></h2>
                 <input #nota1 type="text" placeholder="Ingresa tu nota" autocomplete="off" required>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-sm-4 mt-1 text-center">
                 <h2 #tituloEva2></h2>
                 <input #nota2 type="text" placeholder="Ingresa tu nota" autocomplete="off" required>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-sm-4 mt-1 text-center">
                 <h2>ESCOGER NOTA</h2>
                 <select name="notas" class="select-notas" #notaEscogida (change)="selectNota()">
                     <option value="EP" class="opcion">Examen Parcial</option>
@@ -23,12 +23,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8 text-center">
+            <div class="col-sm-8 text-center">
                 <!-- BOTÓN RESULTADO -->
                 <button type="button" (click)="botonResultadoIndividual()" class="boton-resultado-individual btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" >CALCULAR RESTANTE</button>
 
                 <!-- AVISO -->
-                <p class="aviso-negativo"><b>AVISO: </b>Si la nota mínima sale negativa significa que, aunque no des dicho examen <br> o no consigas una alta evaluación, apruebas de todos modos.</p>
+                <p class="aviso-negativo"><b>AVISO: </b>Si la nota mínima sale negativa significa que apruebas de todos modos.</p>
 
                 <!-- MODAL -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -47,9 +47,7 @@
                         </div>  
                     </div>
                 </div>
-
             </div>
-            <div class="col-md-4 text-center"></div>
         </div>
     </div>
 </section>

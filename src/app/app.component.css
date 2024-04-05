@@ -24,3 +24,23 @@ footer{
     color: #ffffff;
     height: 70px;
 }
+
+/*RESPONSIVE*/
+
+@media (max-width: 400px){
+    .nav-item{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-item a{
+        margin-left: 0;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    footer span{
+        font-size: 12px;
+    }
+    
+}

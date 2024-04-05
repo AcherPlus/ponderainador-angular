@@ -13,7 +13,7 @@
     font-size: 100px;
 }
 
-.seccion .col-md-4, .seccion .col-md-6{
+.seccion .col-sm-4, .seccion .col-sm-6{
     margin-top: 40px;
     height: 230px;
 }
@@ -49,6 +49,10 @@
     color: #417EE8; 
 }
 
+.modal-content p{
+    font-size: 20px;
+}
+
 /* ANIMACIONES */
 
 @keyframes aparecer-derecha {
@@ -70,5 +74,93 @@
     100%{
         transform: translateX(0px);
         opacity: 1;
+    }
+}
+
+/*RESPONSIVE*/
+@media (max-width: 1400px){
+    .seccion h1{
+        font-size: 80px;
+    }
+    .seccion h2{
+        font-size: 30px;
+    }
+    .seccion p{
+        font-size: 25px;
+    }
+    .seccion input{
+        width: 70%;
+        height: 60px;
+        font-size: 20px;
+    }
+    .seccion .boton-resultado-total, .seccion .boton-resultado-individual{
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+        margin-top: 0;
+    }
+
+    .modal-content p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .seccion h1{
+        font-size: 60px;
+    }
+    .seccion h2{
+        font-size: 25px;
+    }
+    .seccion p{
+        font-size: 20px;
+    }
+
+    .modal-content p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .seccion p{
+        font-size: 18px;
+    }
+
+    .seccion input{
+        width: 50%;
+        height: 50px;
+    }
+
+    .modal-content p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .seccion h1{
+        font-size: 50px;
+    }
+    .seccion h2{
+        font-size: 20px;
+    }
+    .seccion p{
+        font-size: 16px;
+    }
+
+    .seccion .col-sm-4, .seccion .col-sm-6{
+        height: 150px;
+    }
+
+    .seccion .boton-resultado-total, .seccion .boton-resultado-individual{
+        margin-top: 20px;
+    }
+
+    .modal-content{
+        margin: auto;
+        width: 80%;
+    }
+
+    .modal-content p{
+        font-size: 20px;
     }
 }
