@@ -60,7 +60,7 @@ export class NotaIndividualComponent implements OnInit {
                   notaMaxima = 0.3 * (20 + nota2) + 0.4 * (nota1);
                   break;   
       case "EC":  notaMinima = ((106 - 3 * (nota1 + nota2))/4);
-                  notaMaxima = 0.3 * (nota1 + nota2) + 0.4 * (20);
+                  notaMaxima = 0.3 * (nota1 + nota2) + 0.4 * 20;
                   break;
       case "EF":  notaMinima = ((106 - 4 * nota2)/3) - nota1;
                   notaMaxima = 0.3 * (nota1 + 20) + 0.4 * (nota2);
@@ -79,15 +79,20 @@ export class NotaIndividualComponent implements OnInit {
     const nota1 = parseFloat(this.nota1?.nativeElement.value);
     const nota2 = parseFloat(this.nota2?.nativeElement.value);
     const resultadoParrafo = this.resultadoParrafo?.nativeElement;
-    let resultadoMinMax = this.hallarPonderadoIndividual(nota1,nota2);
+    
+    if ((nota1 <= 20 && nota1 >= 0) && (nota2 <= 20 && nota2 >= 0)) {
+      let resultadoMinMax = this.hallarPonderadoIndividual(nota1,nota2);
 
-    if (resultadoMinMax.length > 0) {
-      resultadoParrafo.textContent = '';
-      if (resultadoMinMax[0] <= 20.0 && resultadoMinMax[1] <= 20.0) {
-        resultadoParrafo.innerHTML = `Nota mínima: <b>${resultadoMinMax[0]}</b> <br> Nota máxima: <b>${resultadoMinMax[1]}</b>`;
-      } else {
-        resultadoParrafo.innerHTML = `Resultado no válido, ingrese valores entre 0 y 20.`;
+      if (resultadoMinMax.length > 0) {
+        resultadoParrafo.textContent = '';
+        if (resultadoMinMax[0] <= 20.0 && resultadoMinMax[1] <= 20.0) {
+          resultadoParrafo.innerHTML = `Nota mínima: <b>${resultadoMinMax[0]}</b> <br> Nota máxima: <b>${resultadoMinMax[1]}</b>`;
+        } else {
+          resultadoParrafo.innerHTML = `Resultado no válido, ingrese valores entre 0 y 20.`;
+        }
       }
+    } else {
+      resultadoParrafo.innerHTML = `Resultado no válido, ingrese valores entre 0 y 20.`;
     }
   }
 }
