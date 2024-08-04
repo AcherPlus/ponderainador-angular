@@ -1,7 +1,7 @@
 /* SECCIÓN TOTAL E INDIVIDUAL */
 .seccion{
     background: linear-gradient(90deg, rgba(7,40,106,1) 35%, rgba(108,114,230,1) 100%);
-    height: 100vh;
+    height: calc(100vh - 70px - 70px);
 }
 
 .seccion h1,h2,p,input,button,select,.modal{
