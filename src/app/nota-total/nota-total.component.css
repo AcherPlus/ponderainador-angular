@@ -1,166 +1,144 @@
 /* SECCIÓN TOTAL E INDIVIDUAL */
-.seccion{
+.seccion {
     background: linear-gradient(90deg, rgba(7,40,106,1) 35%, rgba(108,114,230,1) 100%);
-    height: calc(100vh - 70px - 70px);
+    min-height: calc(100vh - 70px - 70px);
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.seccion h1,h2,p,input,button,select,.modal{
+/* Animaciones */
+.seccion h1, .seccion h2, .seccion p, .seccion input, .seccion button, .seccion select, .modal {
     animation: aparecer-derecha 1.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
 }
 
-.seccion h1{
+.seccion h1 {
     color: #ffffff;
-    font-size: 100px;
+    font-size: 90px;
+    text-align: center;
 }
 
-.seccion .col-sm-4, .seccion .col-sm-6{
-    margin-top: 40px;
-    height: 230px;
+.seccion .col-sm-4, .seccion .col-sm-6 {
+    margin-top: 30px;
 }
 
-.seccion h2{
+.seccion h2 {
     color: #ffffff;
-    font-size: 40px;
+    font-size: 35px;
 }
 
-.seccion input{
-    width: 50%;
-    height: 80px;
+/* Estilos de inputs */
+.seccion input {
+    width: 60%;
+    height: 70px;
     border: none;
     border-radius: 10px;
-    margin: 20px;
+    margin: 15px;
     text-align: center;
-    font-size: 30px;
+    font-size: 28px;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.seccion .boton-resultado-total, .seccion .boton-resultado-individual{
-    width: 250px;
-    height: 60px;
+/* Botones */
+.seccion .boton-resultado-total, .seccion .boton-resultado-individual {
+    width: 240px;
+    height: 55px;
     font-weight: 600;
     font-size: 18px;
     border: none;
     background-color: #417EE8;
     color: #ffffff;
-    margin-top: 60px;
+    margin-top: 40px;
+    transition: 0.3s ease-in-out;
 }
 
-.seccion .boton-resultado-total:hover,.seccion .boton-resultado-individual:hover{
+.seccion .boton-resultado-total:hover, 
+.seccion .boton-resultado-individual:hover {
     background: #ffffff;
-    color: #417EE8; 
+    color: #417EE8;
 }
 
-.modal-content p{
+/* Modal */
+.modal-content {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.modal-content p {
     font-size: 20px;
 }
 
-/* ANIMACIONES */
-
+/* Animaciones */
 @keyframes aparecer-derecha {
-    0%{
-        transform: translateX(-100px);
+    0% {
+        transform: translateX(-80px);
         opacity: 0;
     }
-    100%{
+    100% {
         transform: translateX(0px);
         opacity: 1;
     }
 }
 
-@keyframes aparecer-izquierda {
-    0%{
-        transform: translateX(200px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
-
-/*RESPONSIVE*/
-@media (max-width: 1400px){
-    .seccion h1{
+/* RESPONSIVE DESIGN */
+@media (max-width: 1200px) {
+    .seccion h1 {
         font-size: 80px;
     }
-    .seccion h2{
-        font-size: 30px;
+    .seccion h2 {
+        font-size: 32px;
     }
-    .seccion p{
-        font-size: 25px;
-    }
-    .seccion input{
-        width: 70%;
-        height: 60px;
-        font-size: 20px;
-    }
-    .seccion .boton-resultado-total, .seccion .boton-resultado-individual{
-        width: 200px;
-        height: 50px;
-        font-size: 16px;
-        margin-top: 0;
-    }
-
-    .modal-content p{
-        font-size: 20px;
+    .seccion input {
+        font-size: 26px;
     }
 }
 
 @media (max-width: 992px) {
-    .seccion h1{
+    .seccion h1 {
+        font-size: 70px;
+    }
+    .seccion h2 {
+        font-size: 28px;
+    }
+    .seccion input {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 914px) {
+    .seccion h1 {
         font-size: 60px;
     }
-    .seccion h2{
-        font-size: 25px;
+    .seccion h2 {
+        font-size: 26px;
     }
-    .seccion p{
-        font-size: 20px;
-    }
-
-    .modal-content p{
-        font-size: 20px;
+    .seccion input {
+        font-size: 22px;
     }
 }
 
 @media (max-width: 768px) {
-    .seccion p{
-        font-size: 18px;
+    .seccion h1 {
+        font-size: 50px;
     }
-
-    .seccion input{
-        width: 50%;
-        height: 50px;
+    .seccion h2 {
+        font-size: 22px;
     }
-
-    .modal-content p{
+    .seccion input {
         font-size: 20px;
     }
 }
 
 @media (max-width: 576px) {
-    .seccion h1{
-        font-size: 50px;
+    .seccion h1 {
+        font-size: 40px;
     }
-    .seccion h2{
-        font-size: 20px;
+    .seccion h2 {
+        font-size: 18px;
     }
-    .seccion p{
-        font-size: 16px;
-    }
-
-    .seccion .col-sm-4, .seccion .col-sm-6{
-        height: 150px;
-    }
-
-    .seccion .boton-resultado-total, .seccion .boton-resultado-individual{
-        margin-top: 20px;
-    }
-
-    .modal-content{
-        margin: auto;
-        width: 80%;
-    }
-
-    .modal-content p{
-        font-size: 20px;
+    .seccion input {
+        font-size: 18px;
     }
 }
