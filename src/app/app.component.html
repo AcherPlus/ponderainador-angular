@@ -1,21 +1,46 @@
-<!-- NAVBAR -->
 <header>
-  <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/inicio" routerLinkActive="router-link-active">Inicio</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" routerLink="/nota-total" routerLinkActive="router-link-active">Nota Total</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" routerLink="/nota-individual" routerLinkActive="router-link-active">Nota Individual</a>
-    </li>
-  </ul>
+  <nav class="navbar navbar-expand-sm bg-body-tertiary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/inicio"
+              routerLinkActive="router-link-active"
+              >Inicio</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/nota-total"
+              routerLinkActive="router-link-active"
+              >Nota Total</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/nota-individual"
+              routerLinkActive="router-link-active"
+              >Nota Individual</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>
 
-<router-outlet/>
+<main>
+  <router-outlet />
+</main>
 
 <!-- FOOTER -->
 <footer class="d-flex justify-content-center align-items-center">
-  <span ><b>Sitio creado con Angular. Enmanuel Obando 2024.</b></span>
+  <span><b>Sitio creado con Angular. Enmanuel Obando 2024.</b></span>
 </footer>

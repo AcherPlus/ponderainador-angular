@@ -1,4 +1,5 @@
 /* SECCIÓN INICIO */
+/*
 .seccion-inicio{
     background: linear-gradient(90deg, rgba(7,40,106,1) 35%, rgba(108,114,230,1) 100%);
     height: calc(100vh - 70px - 70px);
@@ -23,8 +24,6 @@
     animation: aparecer-izquierda 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
 }
 
-/* ANIMACIONES */
-
 @keyframes aparecer-derecha {
     0%{
         transform: translateX(-100px);
@@ -47,7 +46,6 @@
     }
 }
 
-/*RESPONSIVE*/
 @media (max-width: 1200px) {
     .seccion-inicio h1{
         font-size: 80px;
@@ -115,5 +113,123 @@
     }
     .seccion-inicio img{
         width: 100px;
+    }
+}
+*/
+
+
+/* SECCIÓN INICIO */
+.seccion-inicio {
+    background: linear-gradient(90deg, rgba(7,40,106,1) 35%, rgba(108,114,230,1) 100%);
+    height: calc(100dvh - 70px - 70px);
+}
+
+.seccion-inicio h1, .seccion-inicio p {
+    color: #ffffff;
+    animation: aparecer-derecha 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+}
+
+.seccion-inicio h1 {
+    font-size: 100px;
+}
+
+.seccion-inicio p {
+    font-size: 30px;
+}
+
+.seccion-inicio img {
+    width: 350px;
+    max-width: 100%;
+    margin-left: 0;
+    animation: aparecer-izquierda 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+}
+
+@keyframes aparecer-derecha {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes aparecer-izquierda {
+    0%{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/*RESPONSIVE*/
+@media (max-width: 1200px) {
+    .seccion-inicio h1 {
+        font-size: 80px;
+    }
+    .seccion-inicio p {
+        font-size: 25px;
+    }
+    .seccion-inicio img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    .seccion-inicio h1 {
+        font-size: 60px;
+    }
+    .seccion-inicio p {
+        font-size: 20px;
+    }
+    .seccion-inicio img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .seccion-inicio h1 {
+        font-size: 50px;
+    }
+    .seccion-inicio p {
+        font-size: 18px;
+    }
+
+    .seccion-inicio h1, .seccion-inicio p {
+        text-align: center;
+    }
+
+    .seccion-inicio img {
+        width: 200px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .seccion-inicio h1 {
+        font-size: 40px;
+    }
+    .seccion-inicio p {
+        font-size: 16px;
+    }
+    .seccion-inicio img {
+        width: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .seccion-inicio h1 {
+        font-size: 35px;
+    }
+    .seccion-inicio p {
+        font-size: 14px;
+    }
+    .seccion-inicio img {
+        width: 120px;
     }
 }

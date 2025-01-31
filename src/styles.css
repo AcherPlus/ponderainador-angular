@@ -1,8 +1,18 @@
-*{
-    font-family: 'Rubik',sans-serif;
+* {
+  font-family: "Rubik", sans-serif;
 }
 
-html,body{
+/* html, body {
     height: 100%;
     margin: 0;
+} */
+
+html {
+  min-height: 100%;
+  position: relative;
+  background: #1f4aa1;
+}
+body {
+  margin: 0;
+  margin-bottom: 40px;
 }
