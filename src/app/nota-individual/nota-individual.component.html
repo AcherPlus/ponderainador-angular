@@ -1,53 +1,102 @@
 <!-- SECCIÓN NOTA INDIVIDUAL -->
-<section class="seccion d-flex flex-column justify-content-center align-items-center">
-    <div class="container-fluid">
-        <div class="row">
-            <h1 class="text-center">NOTA INDIVIDUAL</h1>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 mt-1 text-center">
-                <h2 #tituloEva1></h2>
-                <input #nota1 type="text" placeholder="Ingresa tu nota" autocomplete="off" required>
-            </div>
-            <div class="col-sm-4 mt-1 text-center">
-                <h2 #tituloEva2></h2>
-                <input #nota2 type="text" placeholder="Ingresa tu nota" autocomplete="off" required>
-            </div>
-            <div class="col-sm-4 mt-1 text-center">
-                <h2>ESCOGER NOTA</h2>
-                <select name="notas" class="select-notas" #notaEscogida (change)="selectNota()">
-                    <option value="EP" class="opcion">Examen Parcial</option>
-                    <option value="EC" class="opcion">Evaluación Continua</option>
-                    <option value="EF" class="opcion">Examen Final</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-8 text-center">
-                <!-- BOTÓN RESULTADO -->
-                <button type="button" (click)="botonResultadoIndividual()" class="boton-resultado-individual btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" >CALCULAR RESTANTE</button>
-
-                <!-- AVISO -->
-                <p class="aviso-negativo"><b>AVISO: </b>Si la nota mínima sale negativa significa que apruebas de todos modos.</p>
-
-                <!-- MODAL -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5 text-black" #mensajeModal>NOTA INDIVIDUAL</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p class="text-black" #resultadoParrafo></p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            </div>
-                        </div>  
-                    </div>
-                </div>
-            </div>
-        </div>
+<section
+  class="seccion d-flex flex-column justify-content-center align-items-center"
+>
+  <div class="container-fluid">
+    <div class="row">
+      <h1 class="text-center">NOTA INDIVIDUAL</h1>
     </div>
+    <div class="row">
+      <div class="col-sm-4 mt-1 text-center">
+        <h2 #tituloEva1></h2>
+        <input
+          #nota1
+          type="text"
+          placeholder="Ingresa tu nota"
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="col-sm-4 mt-1 text-center">
+        <h2 #tituloEva2></h2>
+        <input
+          #nota2
+          type="text"
+          placeholder="Ingresa tu nota"
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="col-sm-4 mt-1 text-center">
+        <h2>ESCOGER NOTA</h2>
+        <select
+          name="notas"
+          class="select-notas"
+          #notaEscogida
+          (change)="selectNota()"
+        >
+          <option value="EP" class="opcion">Examen Parcial</option>
+          <option value="EC" class="opcion">Evaluación Continua</option>
+          <option value="EF" class="opcion">Examen Final</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8 text-center">
+        <!-- BOTÓN RESULTADO -->
+        <button
+          type="button"
+          (click)="botonResultadoIndividual()"
+          class="boton-resultado-individual btn btn-light"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          CALCULAR RESTANTE
+        </button>
+
+        <!-- AVISO -->
+        <p class="aviso-negativo">
+          <b>AVISO: </b>Si la nota mínima sale negativa significa que apruebas
+          de todos modos.
+        </p>
+
+        <!-- MODAL -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-black" #mensajeModal>
+                  NOTA INDIVIDUAL
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <p class="text-black" #resultadoParrafo></p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
