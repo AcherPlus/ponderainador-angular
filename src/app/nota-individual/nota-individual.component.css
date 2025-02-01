@@ -31,8 +31,12 @@
   }
   p {
     font-size: 14px;
-    text-align: center;
   }
+
+  input {
+    font-size: 14px;
+  }
+
   .boton-resultado {
     width: 80%;
     max-width: 250px;
