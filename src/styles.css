@@ -7,7 +7,98 @@ html {
   position: relative;
   background: #1f4aa1;
 }
+
 body {
   margin: 0;
   margin-bottom: 40px;
+}
+
+section {
+  background: linear-gradient(90deg, rgba(7,40,106,1) 35%, rgba(108,114,230,1) 100%);
+  height: calc(100dvh - 70px - 70px);
+  padding: 20px;
+}
+
+h1, p, h2 {
+  color: #ffffff;
+}
+
+h1{
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h1, h2, p, input, button, select,.aviso-negativo,.modal {
+  animation: aparecer-derecha 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+}
+
+.col-md-4, .col-md-6{
+  margin-top: 40px;
+  height: auto;
+}
+
+.col-sm-4, .col-sm-6 {
+  margin-top: 30px;
+}
+
+input {
+  width: 60%;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  margin: 20px auto;
+  font-size: 24px;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.boton-resultado{
+  width: 240px;
+  height: 55px;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  background-color: #417EE8;
+  color: #ffffff;
+  margin-top: 40px;
+  transition: 0.3s ease-in-out;
+}
+
+.boton-resultado:hover{
+  background: #ffffff;
+  color: #417EE8; 
+}
+
+.modal-content {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.modal-content p{
+  font-size: 20px;
+}
+
+@keyframes aparecer-derecha {
+  0%{
+      transform: translateX(-100px);
+      opacity: 0;
+  }
+  100%{
+      transform: translateX(0px);
+      opacity: 1;
+  }
+}
+
+@keyframes aparecer-izquierda {
+  0%{
+      transform: translateX(200px);
+      opacity: 0;
+  }
+  100%{
+      transform: translateX(0px);
+      opacity: 1;
+  }
 }

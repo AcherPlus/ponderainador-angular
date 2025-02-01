@@ -1,142 +1,79 @@
-/* SECCIÓN TOTAL E INDIVIDUAL */
-.seccion{
-    background: linear-gradient(90deg, rgba(7,40,106,1) 35%, rgba(108,114,230,1) 100%);
-    height: calc(100vh - 70px - 70px);
-    overflow: hidden;
-    padding: 20px;
-    box-sizing: border-box;
+.select-notas {
+  width: 80%;
+  max-width: 300px;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  margin: 20px auto;
+  font-size: 24px;
+  display: block;
 }
 
-.seccion h1,h2,p,input,button,select,.aviso-negativo,.modal{
-    animation: aparecer-derecha 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
-}
-
-.seccion h1{
-    color: #ffffff;
-    font-size: 100px;
-}
-
-.seccion .col-md-4, .seccion .col-md-6{
-    margin-top: 40px;
-    height: auto;
-}
-
-.seccion h2{
-    color: #ffffff;
-    font-size: 40px;
-    margin-top: 40px;
-}
-
-.seccion input{
-    width: 80%;
-    max-width: 300px;
-    height: 60px;
-    border: none;
-    border-radius: 10px;
-    margin: 20px auto;
-    text-align: center;
-    font-size: 24px;
-    display: block;
-}
-
-.seccion .boton-resultado-total, .seccion .boton-resultado-individual{
-    width: 250px;
-    height: 60px;
-    font-weight: 600;
-    font-size: 18px;
-    border: none;
-    background-color: #417EE8;
-    color: #ffffff;
-    margin-top: 40px;
-}
-
-.seccion .boton-resultado-total:hover,.seccion .boton-resultado-individual:hover{
-    background: #ffffff;
-    color: #417EE8; 
-}
-
-/* SELECT NOTAS */
-.select-notas{
-    width: 80%;
-    max-width: 300px;
-    height: 50px;
-    border: none;
-    border-radius: 10px;
-    margin: 20px auto;
-    text-align: center;
-    font-size: 24px;
-    display: block;
-}
-
-.aviso-negativo{
-    margin-top: 20px;
-    font-size: 16px;
-    color: #ffffff;
-}
-
-.modal-content p{
-    font-size: 20px;
+.aviso-negativo {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ffffff;
 }
 
 /* ANIMACIONES */
 
 @keyframes aparecer-derecha {
-    0%{
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 @keyframes aparecer-izquierda {
-    0%{
-        transform: translateX(200px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 /*RESPONSIVE*/
 @media (max-width: 576px) {
-    .seccion {
-        height: auto;
-        min-height: calc(100vh - 70px - 70px);
-        padding-bottom: 20px;
-    }
-    .seccion h1{
-        font-size: 30px;
-        text-align: center;
-    }
-    .seccion h2{
-        font-size: 18px;
-    }
-    .seccion p{
-        font-size: 14px;
-        text-align: center;
-    }
-    .seccion .boton-resultado-total, .seccion .boton-resultado-individual{
-        width: 80%;
-        max-width: 250px;
-        height: 50px;
-        font-size: 16px;
-        margin-top: 20px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  section {
+    height: auto;
+    min-height: calc(100vh - 70px - 70px);
+    padding-bottom: 20px;
+  }
+  h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+    text-align: center;
+  }
+  .boton-resultado {
+    width: 80%;
+    max-width: 250px;
+    height: 50px;
+    font-size: 16px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .modal-content{
-        margin: auto;
-        width: 90%;
-    }
+  .modal-content {
+    margin: auto;
+    width: 90%;
+  }
 
-    .modal-content p{
-        font-size: 18px;
-    }
+  .modal-content p {
+    font-size: 18px;
+  }
 }
