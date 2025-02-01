@@ -1,57 +1,32 @@
 /* RESPONSIVE DESIGN */
-@media (max-width: 1200px) {
-  h1 {
-    font-size: 80px;
-  }
-  h2 {
-    font-size: 32px;
-  }
-  input {
-    font-size: 26px;
-  }
-}
-
-@media (max-width: 992px) {
-  h1 {
-    font-size: 60px;
-  }
-  h2 {
-    font-size: 28px;
-  }
-  input {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 914px) {
-  h1 {
-    font-size: 40px;
-  }
-  h2 {
-    font-size: 26px;
-  }
-  input {
-    font-size: 22px;
-  }
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 20px;
-  }
-  h2 {
-    font-size: 16px;
-  }
-  input {
-    font-size: 16px;
-  }
-}
 
 @media (max-width: 576px) {
-  h2 {
-    font-size: 14px;
+  section {
+    height: auto;
+    min-height: calc(100dvh - 70px - 70px);
+    padding-bottom: 20px;
   }
+  
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
   input {
     font-size: 14px;
+  }
+  
+  .boton-resultado {
+    width: 80%;
+    max-width: 250px;
+    height: 50px;
+    font-size: 16px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

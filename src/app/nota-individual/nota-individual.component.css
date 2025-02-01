@@ -20,12 +20,11 @@
 @media (max-width: 576px) {
   section {
     height: auto;
-    min-height: calc(100vh - 70px - 70px);
+    min-height: calc(100dvh - 70px - 70px);
     padding-bottom: 20px;
   }
   h1 {
     font-size: 30px;
-    text-align: center;
   }
   h2 {
     font-size: 18px;
