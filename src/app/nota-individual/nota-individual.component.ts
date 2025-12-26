@@ -28,16 +28,56 @@ export class NotaIndividualComponent implements OnInit {
     setTimeout(() => this.selectNota());
   }
 
+  validarSoloNumeros(event: KeyboardEvent): boolean {
+    const charCode = event.which ? event.which : event.keyCode;
+
+    // Permite números (48-57) y punto (46)
+    if (charCode !== 46 && charCode > 31 && (charCode < 48 || charCode > 57)) {
+      return false;
+    }
+    
+    console.log("Reconociendo...")
+    return true;
+  }
+
+  validarRangoYDecimales(input: HTMLInputElement): void {
+    let valor = input.value;
+
+    // Evitar más de un punto decimal
+    const puntos = valor.split('.').length - 1;
+    if (puntos > 1) {
+      valor = valor.slice(0, -1);
+    }
+
+    // Limitar a dos decimales
+    if (valor.includes('.')) {
+      const partes = valor.split('.');
+      if (partes[1].length > 2) {
+        valor = partes[0] + '.' + partes[1].slice(0, 2);
+      }
+    }
+
+    // Validar rango 0-20
+    const num = parseFloat(valor);
+    if (!isNaN(num)) {
+      if (num > 20) valor = '20';
+      if (num < 0) valor = '0';
+    }
+
+    // Actualizar el valor
+    input.value = valor;
+  }
+
   selectNota = () => {
     const valorSelec1 = this.notaEscogida?.nativeElement.value;
     const evaluaciones: Record<string, [string, string]> = {
-      EP: ['Evaluación Continua', 'Examen Final'],
-      EC: ['Examen Parcial', 'Examen Final'],
-      EF: ['Examen Parcial', 'Evaluación Continua'],
+      EP: ['Evaluación Continua (40%)', 'Examen Final (30%)'],
+      EC: ['Examen Parcial (30%)', 'Examen Final (30%)'],
+      EF: ['Examen Parcial (30%)', 'Evaluación Continua (40%)'],
     };
 
-    this.setText(this.tituloEva1, evaluaciones[valorSelec1]?.[0] || '');
-    this.setText(this.tituloEva2, evaluaciones[valorSelec1]?.[1] || '');
+    this.setText(this.tituloEva1, evaluaciones[valorSelec1]?.[0] || 'Evaluación Continua (40%)');
+    this.setText(this.tituloEva2, evaluaciones[valorSelec1]?.[1] || 'Examen Final (30%)');
   };
 
   private setText(element: ElementRef | undefined, text: string): void {
@@ -96,7 +136,7 @@ export class NotaIndividualComponent implements OnInit {
     );
     const resultado =
       notaMinima <= 20 && notaMaxima <= 20
-        ? `Nota mínima: <b>${notaMinima}</b> <br> Nota máxima: <b>${notaMaxima}</b>`
+        ? `Nota mínima: <b>${notaMinima <= 0 ? 'Aprobado' : notaMinima}</b> <br> Nota máxima: <b>${notaMaxima}</b>`
         : 'Resultado no válido, ingrese valores entre 0 y 20.';
 
     this.setText(this.resultadoParrafo, resultado);

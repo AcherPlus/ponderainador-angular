@@ -11,7 +11,9 @@
           #nota1
           type="text"
           class="text-center"
-          placeholder="Ingresa tu nota"
+          placeholder="0.00"
+          (keypress)="validarSoloNumeros($event)"
+          (input)="validarRangoYDecimales(nota1)"
           autocomplete="off"
           required
         />
@@ -22,13 +24,15 @@
           #nota2
           type="text"
           class="text-center"
-          placeholder="Ingresa tu nota"
+          placeholder="0.00"
+          (keypress)="validarSoloNumeros($event)"
+          (input)="validarRangoYDecimales(nota2)"
           autocomplete="off"
           required
         />
       </div>
       <div class="col-sm-4 mt-1 text-center">
-        <h2>ESCOGER NOTA</h2>
+        <h2>Escoger Nota</h2>
         <select
           name="notas"
           class="select-notas text-center"
@@ -54,12 +58,6 @@
           CALCULAR RESTANTE
         </button>
 
-        <!-- AVISO -->
-        <p class="aviso-negativo">
-          <b>AVISO: </b>Si la nota mínima sale negativa significa que apruebas
-          de todos modos.
-        </p>
-
         <!-- MODAL -->
         <div
           class="modal fade"
@@ -69,7 +67,7 @@
           aria-hidden="true"
         >
           <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
+            <div class="modal-content p-0">
               <div class="modal-header">
                 <h1 class="modal-title fs-5 text-black" #mensajeModal>
                   NOTA INDIVIDUAL

@@ -32,7 +32,7 @@ h2 {
 }
 
 h1, h2, p, input, button, select,.aviso-negativo,.modal {
-  animation: aparecer-derecha 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+  animation: aparecer-derecha 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
 }
 
 .col-md-4, .col-md-6{
